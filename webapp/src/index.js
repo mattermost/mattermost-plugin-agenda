@@ -5,7 +5,10 @@ import reducer from './reducer';
 
 import ChannelSettingsModal from './components/meeting_settings';
 
-import {id as pluginId} from './manifest';
+import manifest from './manifest';
+
+const {id: pluginId} = manifest;
+
 export default class Plugin {
     initialize(registry, store) {
         registry.registerReducer(reducer);
